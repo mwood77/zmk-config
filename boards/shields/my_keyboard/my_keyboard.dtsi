@@ -1,0 +1,12 @@
+#import "my_keyboard-layouts.dtsi"
+
+&physical_layout0 {
+    transform = <&default_transform>;
+};
+
+/ {
+    chosen {
+        zmk,kscan = &mock_kscan;
+        zmk,physical-layout = &physical_layout0;
+    };
+};
