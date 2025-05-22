@@ -2,15 +2,15 @@
 
 / {
     chosen {
-        zmk,kscan = &mock_kscan;
+        zmk,kscan = &adb_kscan;
         zmk,physical-layout = &physical_layout0;
     };
 
-    mock_kscan: mock_kscan_0 {
-        compatible = "zmk,kscan-mock";
-        columns = <0>;
-        rows = <0>;
-        events = <0>;
+    adb_kscan: adb_kscan_0 {
+        compatible = "custom,adb-gpio";
+        gpios = <&gpio0 10 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+        debounce-period-ms = <5>;
+        status = "okay";
     };
 
     physical_layout0: physical_layout_0 {
