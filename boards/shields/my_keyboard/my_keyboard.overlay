@@ -8,12 +8,10 @@
 
     adb_kscan: adb_kscan_0 {
         compatible = "custom,adb-gpio";
-        gpios = <&gpio0 10 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>; // Adjust this line
+        gpios = <&gpio0 10 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
         debounce-period-ms = <5>;
-
         status = "okay";
     };
-
 
     physical_layout0: physical_layout_0 {
         compatible = "zmk,physical-layout";
